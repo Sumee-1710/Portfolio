@@ -1,36 +1,143 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sumeet Powar — Personal Portfolio
 
-## Getting Started
+Professional portfolio website for Sumeet Powar — AI/ML, Data Analytics, and Python Developer.
 
-First, run the development server:
+Built with **Next.js 16**, **TypeScript**, **Tailwind CSS v4**, and **Lucide React**.
+
+---
+
+## Tech Stack
+
+| Layer      | Technology                          |
+|------------|-------------------------------------|
+| Framework  | Next.js 16 (App Router)             |
+| Language   | TypeScript                          |
+| Styling    | Tailwind CSS v4 + CSS custom props  |
+| Icons      | Lucide React                        |
+| Fonts      | Inter (Google Fonts)                |
+| Deployment | Vercel (recommended)                |
+
+---
+
+## Project Structure
+
+```
+portfolio/
+├── app/
+│   ├── globals.css       # Global styles, CSS variables, animations
+│   ├── layout.tsx        # Root layout + metadata + font
+│   └── page.tsx          # Main page — assembles all sections
+├── components/
+│   ├── Navbar.tsx        # Sticky navbar with active-section highlighting
+│   ├── Hero.tsx          # Hero with typewriter effect and stats
+│   ├── About.tsx         # About + quick info card
+│   ├── Skills.tsx        # Categorised skill tags
+│   ├── Experience.tsx    # Work experience with bullet points
+│   ├── Projects.tsx      # Project cards with expandable detail view
+│   ├── Education.tsx     # Education cards
+│   ├── Certifications.tsx# Certification cards
+│   ├── Achievements.tsx  # Achievements / awards
+│   └── Contact.tsx       # Contact links + footer
+├── hooks/
+│   └── useIntersectionObserver.ts  # Scroll-reveal hook
+├── lib/
+│   └── data.ts           # All portfolio content (single source of truth)
+└── public/
+    └── Sumeet-Powar-Resume.pdf     # ← Place your resume PDF here
+```
+
+---
+
+## Local Development
+
+### Prerequisites
+
+- Node.js 18+
+- npm 9+
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start dev server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Adding Your Resume PDF
 
-## Learn More
+1. Export your resume as a PDF.
+2. Rename it to `Sumeet-Powar-Resume.pdf`.
+3. Place it in the `public/` folder.
+4. The "Download Resume" button will work automatically.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Updating Content
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+All portfolio content lives in **`lib/data.ts`**.
 
-## Deploy on Vercel
+To update:
+- **Personal info** → edit the `personal` object
+- **Skills** → edit the `skills` array
+- **Experience** → edit the `experience` array
+- **Projects** → edit the `projects` array
+- **Education** → edit the `education` array
+- **Certifications** → edit the `certifications` array
+- **Achievements** → edit the `achievements` array
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Updating Links
+
+In `lib/data.ts`, update:
+
+```ts
+export const personal = {
+  github:   "https://github.com/Sumee-1710",
+  linkedin: "https://www.linkedin.com/in/sumeet-powar",  // ← verify this URL
+  ...
+};
+```
+
+---
+
+## Build for Production
+
+```bash
+npm run build
+npm run start
+```
+
+---
+
+## Deploy to Vercel (Recommended)
+
+1. Push the project to a GitHub repository.
+2. Go to [vercel.com](https://vercel.com) and import the repository.
+3. Vercel auto-detects Next.js — click **Deploy**.
+4. Done. Your portfolio is live.
+
+---
+
+## Lint
+
+```bash
+npm run lint
+```
+
+---
+
+## Notes
+
+- All content is sourced from the resume and verified GitHub repositories only.
+- No fake statistics, fake testimonials, or invented experience.
+- The portfolio is fully responsive (mobile, tablet, desktop).
+- Sections animate in on scroll using `IntersectionObserver`.
