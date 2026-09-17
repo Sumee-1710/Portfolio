@@ -473,7 +473,7 @@ export default function Projects() {
               maxWidth: 540,
             }}
           >
-            End-to-end AI/ML, data engineering, and generative AI projects. Click{" "}
+            End-to-end AI/ML, Data Science, Generative AI, and Computer Vision projects. Click{" "}
             <strong style={{ color: "var(--text-primary)" }}>View details</strong> on any card for a
             deep dive into the problem, approach, and results.
           </p>

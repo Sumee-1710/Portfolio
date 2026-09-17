@@ -4,9 +4,9 @@
 
 export const personal = {
   name: "Sumeet Powar",
-  title: "AI/ML | Data Analytics | Python",
+  title: "AI/ML & Data Professional | Data Science | Generative AI",
   tagline:
-    "AI/ML-focused Computer Science graduate with hands-on experience building machine learning, computer vision, NLP, and data analytics solutions.",
+    "Computer Science graduate with hands-on experience building machine learning, Generative AI, computer vision, NLP, and data analytics solutions using Python and SQL.",
   email: "sumeet.powar1710@gmail.com",
   phone: "+918928489835",
   location: "Pune / Mumbai, India",
@@ -101,33 +101,41 @@ export const experience = [
 
 export const projects = [
   {
-    id: "transaction-reconciliation",
-    name: "Transaction Reconciliation System",
-    role: "Python Developer",
+    id: "genai-data-analyst",
+    name: "GenAI Data Analyst",
+    role: "GenAI Developer / Python Developer",
     period: "Jun 2026 – Aug 2026",
     summary:
-      "Automated financial transaction reconciliation system that compares transaction and settlement records, classifies discrepancies by severity, and surfaces exception reports.",
+      "GenAI-powered BI platform that enables natural-language querying of CSV/Excel datasets, automated data profiling, visualization generation, anomaly detection, forecasting, and AI-powered business insight summarization.",
     description:
-      "Built an end-to-end reconciliation pipeline using Python and Pandas to perform 100% record-level validation between transaction and settlement datasets. The system detects five or more categories of financial exceptions — including duplicate transactions, missing settlements, amount mismatches, and settlement delays — then classifies each by severity. Results are surfaced through an interactive Streamlit dashboard for reconciliation analytics, issue tracking, and data quality monitoring.",
+      "Built a GenAI-powered BI platform using the Gemini API and LangChain that allows users to query CSV/Excel datasets in plain English. The system uses LLM-based Text-to-Code generation with Pandas and SQL to answer data questions, runs automated data profiling, generates visualizations, detects anomalies, performs forecasting, and summarizes business insights using AI. Integrated RAG with FAISS embeddings and vector search for context-aware document analysis and conversational follow-up queries. Deployed through a Streamlit interface.",
     problem:
-      "Manual reconciliation of financial records is error-prone, time-consuming, and doesn't scale. Exceptions such as duplicates, missing settlements, and amount mismatches are hard to catch reliably at volume.",
+      "Business analysts without coding skills cannot independently explore datasets, generate visualizations, or extract insights from structured data. Manual analysis is slow and doesn't scale to conversational, follow-up queries.",
     approach:
-      "Automated matching using Python and Pandas with rule-based exception classification. Every record is validated, exceptions are tagged by category and severity, and an interactive dashboard provides real-time visibility into settlement health.",
+      "LLM-based Text-to-Code generation converts natural-language questions into executable Pandas/SQL code against the uploaded dataset. RAG with FAISS enables context-aware document retrieval for follow-up queries. Streamlit provides the conversational interface and visualization output.",
+    workflow: [
+      "User uploads a CSV or Excel dataset via Streamlit",
+      "Automated data profiling runs on the uploaded dataset",
+      "User enters a natural-language question",
+      "Gemini API generates Pandas/SQL code to answer the question",
+      "Code executes against the dataset; results and visualizations are displayed",
+      "RAG with FAISS enables context-aware follow-up queries",
+      "AI summarizes key business insights from the analysis",
+    ],
     features: [
-      "Automated comparison of transaction vs. settlement records",
-      "Detection of 5+ exception categories: duplicates, missing settlements, amount mismatches, settlement delays",
-      "Severity-based issue classification for prioritised investigation",
-      "Automated exception reporting for financial operations monitoring",
-      "Interactive Streamlit dashboard for reconciliation analytics and data quality monitoring",
+      "Natural-language querying of CSV/Excel datasets via LLM Text-to-Code generation",
+      "Automated data profiling on upload",
+      "Visualization generation from natural-language requests",
+      "Anomaly detection and forecasting",
+      "AI-powered business insight summarization",
+      "RAG with FAISS embeddings for context-aware document analysis and follow-up queries",
+      "Conversational interface deployed via Streamlit",
     ],
-    metrics: [
-      { label: "Record-level validation", value: "100%" },
-      { label: "Exception categories detected", value: "5+" },
-    ],
-    tech: ["Python", "Streamlit", "Pandas", "NumPy", "PyTorch"],
+    metrics: [],
+    tech: ["Python", "Pandas", "SQLite", "Gemini API", "LangChain", "FAISS", "Scikit-learn", "Streamlit", "Git/GitHub", "RAG"],
     github: "https://github.com/Sumee-1710",
     live: null,
-    color: "#34d399",
+    color: "#ec4899",
   },
   {
     id: "sql-query-generator",
@@ -135,13 +143,13 @@ export const projects = [
     role: "Generative AI Developer",
     period: "May 2026 – Jun 2026",
     summary:
-      "NL-to-SQL system powered by LangChain and GPT that converts plain-English questions into executable SQL queries against a SQLite database.",
+      "NL-to-SQL system powered by LangChain that converts plain-English questions into executable SQL queries against a SQLite database.",
     description:
       "Built a LangChain-based SQL agent that accepts natural-language questions, reasons over the database schema, generates valid SQL, executes it against a SQLite database, and returns a formatted result. The system includes two agent scripts — one for a quotes SQLite database and one for the 11-table Chinook music database — with schema-aware prompting that significantly improved query reliability.",
     problem:
       "Non-technical users cannot write SQL, which limits their access to data stored in relational databases. A natural language interface removes that barrier without requiring custom query builders.",
     approach:
-      "LangChain SQL agents connect an LLM (GPT via OpenAI API) to a SQLite database. The agent inspects the schema, formulates a SQL query from the natural-language input, executes it, and returns the result in plain English. Schema-aware prompting and SQL-agent configuration further improve accuracy.",
+      "LangChain SQL agents connect an LLM to a SQLite database via SQLAlchemy. The agent inspects the schema, formulates a SQL query from the natural-language input, executes it, and returns the result in plain English. Schema-aware prompting further improves accuracy.",
     workflow: [
       "Natural language question entered by user",
       "LangChain SQL agent inspects database schema",
@@ -153,8 +161,7 @@ export const projects = [
       "Natural language to SQL conversion using LangChain SQL agents",
       "Supports the 11-table Chinook SQLite database and a custom quotes database",
       "Schema-aware prompting for improved query accuracy",
-      "SQL-agent configuration with LangGraph for reliable execution",
-      "Interactive query interface via command-line and Streamlit",
+      "Interactive query interface via Streamlit",
     ],
     metrics: [
       { label: "SQL generation accuracy", value: "90%" },
@@ -162,7 +169,7 @@ export const projects = [
       { label: "Queries tested", value: "50+" },
       { label: "Query reliability improvement", value: "30%" },
     ],
-    tech: ["Python", "LangChain", "LangGraph", "SQLite", "SQL", "SQLAlchemy", "Streamlit", "GPT-4o", "OpenAI API"],
+    tech: ["Python", "LangChain", "SQL", "SQLite", "SQLAlchemy", "Streamlit", "Gemini API"],
     github: "https://github.com/Sumee-1710/SQL-Query-Generator-using-Natural-Language",
     live: null,
     color: "#7c6af7",
@@ -195,6 +202,35 @@ export const projects = [
     github: "https://github.com/Sumee-1710",
     live: null,
     color: "#f59e0b",
+  },
+  {
+    id: "transaction-reconciliation",
+    name: "Transaction Reconciliation System",
+    role: "Python Developer",
+    period: "Jun 2026 – Aug 2026",
+    summary:
+      "Automated financial transaction reconciliation system that compares transaction and settlement records, classifies discrepancies by severity, and surfaces exception reports.",
+    description:
+      "Built an end-to-end reconciliation pipeline using Python and Pandas to perform 100% record-level validation between transaction and settlement datasets. The system detects five or more categories of financial exceptions — including duplicate transactions, missing settlements, amount mismatches, and settlement delays — then classifies each by severity. Results are surfaced through an interactive Streamlit dashboard for reconciliation analytics, issue tracking, and data quality monitoring.",
+    problem:
+      "Manual reconciliation of financial records is error-prone, time-consuming, and doesn't scale. Exceptions such as duplicates, missing settlements, and amount mismatches are hard to catch reliably at volume.",
+    approach:
+      "Automated matching using Python and Pandas with rule-based exception classification. Every record is validated, exceptions are tagged by category and severity, and an interactive dashboard provides real-time visibility into settlement health.",
+    features: [
+      "Automated comparison of transaction vs. settlement records",
+      "Detection of 5+ exception categories: duplicates, missing settlements, amount mismatches, settlement delays",
+      "Severity-based issue classification for prioritised investigation",
+      "Automated exception reporting for financial operations monitoring",
+      "Interactive Streamlit dashboard for reconciliation analytics and data quality monitoring",
+    ],
+    metrics: [
+      { label: "Record-level validation", value: "100%" },
+      { label: "Exception categories detected", value: "5+" },
+    ],
+    tech: ["Python", "Streamlit", "Pandas", "NumPy", "PyTorch"],
+    github: "https://github.com/Sumee-1710",
+    live: null,
+    color: "#34d399",
   },
 ];
 

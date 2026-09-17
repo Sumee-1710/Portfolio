@@ -226,7 +226,7 @@ export default function Hero() {
           }}
         >
           {[
-            { value: "3+",   label: "End-to-end projects" },
+            { value: "4",    label: "End-to-end projects" },
             { value: "87%",  label: "ML model accuracy (internship)" },
             { value: "50K+", label: "Records analysed" },
             { value: "2026", label: "B.Tech Grad (AI & Analytics)" },
