@@ -11,7 +11,7 @@ export const personal = {
   phone: "+918928489835",
   location: "Pune / Mumbai, India",
   github: "https://github.com/Sumee-1710",
-  linkedin: "https://www.linkedin.com/in/sumeet-powar",
+  linkedin: "https://www.linkedin.com/in/sumeetpowar17/",
   resumeFile: "/Sumeet-Powar-Resume.pdf",
 };
 

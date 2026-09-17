@@ -27,7 +27,7 @@ export default function Contact() {
     {
       icon: <LinkedinIcon size={18} />,
       label: "LinkedIn",
-      value: "linkedin.com/in/sumeet-powar",
+      value: "linkedin.com/in/sumeetpowar17",
       href: personal.linkedin,
       color: "#38bdf8",
       external: true,

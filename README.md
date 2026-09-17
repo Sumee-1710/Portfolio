@@ -102,7 +102,7 @@ In `lib/data.ts`, update:
 ```ts
 export const personal = {
   github:   "https://github.com/Sumee-1710",
-  linkedin: "https://www.linkedin.com/in/sumeet-powar",  // ← verify this URL
+  linkedin: "https://www.linkedin.com/in/sumeetpowar17/",  // ← verified URL
   ...
 };
 ```
